@@ -1,4 +1,27 @@
-name: my workflow
+name: workflow demo
 
 on:
-  
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: my_action
+        run: echo "This is my job"
+        shell: bash
+
+  my_j2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my_job2
+        run: echo "This the second job"
+        shell: bash
+ 
