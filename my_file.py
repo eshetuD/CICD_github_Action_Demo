@@ -1,9 +1,9 @@
 def printHello():
-  print("Hello World")
+    print("Hello World")
 
 
 def getresult():
-  print(printHello())
+    print(printHello())
 
 
-getresult()
+print(getresult())
